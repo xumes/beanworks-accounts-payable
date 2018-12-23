@@ -22,11 +22,23 @@ class Refresh extends Component {
   render() {
     if (!this.props.xero.org) {
       return (
-        <div>
-          <h1>Accounts Payable System</h1>
-          <h2>{JSON.stringify(this.props.xero)}</h2>
-          <h3>No data available</h3>
-          <a href="/api/connect"> Connect to Xero</a>
+        <div className="home-no-data">
+          <div className="card bg-primary mb-3">
+            <div className="card-header">Welcome to our app</div>
+            <div className="card-body">
+              <h5 className="card-title">Accounts Payable System</h5>
+              <p className="card-text">Please, connect to your Xero account.</p>
+            </div>
+            <div className="card-footer bg-transparent border-success">
+              <a
+                className="btn btn-outline-light btn-lg"
+                href="/api/connect"
+              >
+                {" "}
+                Connect to Xero
+              </a>
+            </div>
+          </div>
         </div>
       );
     }
