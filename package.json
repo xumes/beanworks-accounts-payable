@@ -8,7 +8,12 @@
     "url": "https://github.com/xumes/beanworks-accounts-payable"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "webpack -w --config webpack.config.js",
+    "server": "nodemon index.js",
+    "dev": "concurrently --kill-others-on-fail \"npm run client\" \"npm run server\"",
+    "start": "node index.js",
+    "beforeInstall": "webpack --config webpack.config.prod.js"
   },
   "keywords": [
     "beanworks",
