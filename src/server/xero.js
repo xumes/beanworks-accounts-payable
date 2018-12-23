@@ -26,8 +26,8 @@ router.get("/access", async (req, res) => {
     accts,
     contacts
   };
-  
-  res.send(response);
+  res.redirect('/')
+  //res.send(response);
 });
 
 router.get("/connect", async (req, res) => {
@@ -38,7 +38,7 @@ router.get("/connect", async (req, res) => {
   res.redirect(authoriseURL);
 });
 
-router.get("/teste", (req, res) => {
+router.get("/get/all", (req, res) => {
   res.send(response)
 })
 
