@@ -17,7 +17,7 @@ app.use((req, res, next) => {
   return next();
 });
 
-//app.use('/api', require('./src/server/routes'));
+app.use('/api', require('./src/server/routes'));
 
 app.use('/', express.static(path.resolve(__dirname, 'dist')));
 

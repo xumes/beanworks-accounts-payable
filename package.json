@@ -20,7 +20,8 @@
     "xero",
     "invoice",
     "node.js",
-    "react.js"
+    "react.js",
+    "webpack"
   ],
   "author": "Reginaldo Santos (reginaldosantos.br@gmail.com)",
   "license": "ISC",
@@ -41,7 +42,8 @@
     "redux-promise": "^0.6.0",
     "session-memory-store": "^0.2.2",
     "socket.io": "^2.1.1",
-    "socket.io-client": "^2.1.1"
+    "socket.io-client": "^2.1.1",
+    "xero-node": "^3.0.16"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",

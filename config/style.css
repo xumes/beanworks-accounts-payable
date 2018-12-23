@@ -1,0 +1,46 @@
+input {
+    width: 100%;
+    border-radius: 3px;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    text-align: center;
+    color: white;
+  }
+  #container {
+    margin: 5% auto;
+    width: 40%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #073e91;
+  }
+  #logo {
+    width: 50px;
+    height: 50px;
+  }
+  #spanLogoTitle {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .bgLogoTitle {
+    background-color: #031c42;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+  .spanCheckTitle {
+    color: white;
+    padding-bottom: 10px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+  }
+  .checkStyle {
+    margin-left: 0px;
+  }
+ 
