@@ -58,7 +58,7 @@ class Accounts extends Component {
             {
                 this.props.accts && this.props.accts.Accounts &&
                     this.props.accts.Accounts.map((acct) => {
-                        return <Account info={acct} key={acct.Id}/>
+                        return <Account info={acct} key={acct.AccountID}/>
                     })
                 }
             }

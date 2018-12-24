@@ -53,7 +53,7 @@ class Vendors extends Component {
             {
                 this.props.contacts && this.props.contacts.Contacts &&
                     this.props.contacts.Contacts.map((vendor) => {
-                        return <Vendor info={vendor} key={vendor.AccountId}/>
+                        return <Vendor info={vendor} key={vendor.ContactID}/>
                     })
                 }
             }

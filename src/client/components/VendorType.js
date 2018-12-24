@@ -18,7 +18,7 @@ const VendorType = props => {
     return <span className="badge badge-info">Supplier</span>;
   }
 
-  return <span className="badge badge-secondary">No identified</span>;
+  return <span className="badge badge-secondary">Not identified</span>;
 };
 
 export default VendorType;

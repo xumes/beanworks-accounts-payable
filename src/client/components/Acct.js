@@ -2,7 +2,7 @@ import React from "react";
 
 const Acct = props => {
   return (
-    <tr key={props.info.Id}>
+    <tr key={props.info.AccountID}>
       <td>{props.info.Type}</td>
       <td>{props.info.Name}</td>
       <td>{props.info.Class}</td>
