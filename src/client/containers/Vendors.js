@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Vendor from "../components/Vendor";
-import Download from './../components/Download'
+import Download from "./../components/Download";
 
 class Vendors extends Component {
   render() {
     return (
-      <div className='vendors'>
+      <div className="vendors">
         <div className="alert alert-primary" role="alert">
           Vendors List
         </div>
@@ -41,7 +41,7 @@ class Vendors extends Component {
         </nav>
         <div className="border border-primary rounded">
           <div
-            className="btn-toolbar"
+            className="btn-toolbar download-bar"
             role="toolbar"
             aria-label="Toolbar with button groups"
           >
@@ -50,23 +50,12 @@ class Vendors extends Component {
               role="group"
               aria-label="First group"
             >
-              <span className="badge badge-secondary">Filter By:</span>
-              <button type="button" className="btn btn-info">
-                Supplier
-              </button>
-              <button type="button" className="btn btn-success">
-                Customer
-              </button>
-            </div>
-            <div
-              className="btn-group mr-2"
-              role="group"
-              aria-label="Second group"
-            >
-            {
-              this.props.contacts && this.props.contacts.Contacts && <Download dataSet={this.props.contacts.Contacts} from='vendors'/>
-            }
-              
+              {this.props.contacts && this.props.contacts.Contacts && (
+                <Download
+                  dataSet={this.props.contacts.Contacts}
+                  source="vendors"
+                />
+              )}
             </div>
           </div>
         </div>

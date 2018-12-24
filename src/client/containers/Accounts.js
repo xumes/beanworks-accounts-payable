@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
-import Account from './../components/Acct'
+import Account from "./../components/Acct";
+import Download from "./../components/Download";
 
 class Accounts extends Component {
   render() {
     return (
-      <div>
+      <div className="accounts">
         <div className="alert alert-primary" role="alert">
           Accounts
         </div>
@@ -39,6 +40,26 @@ class Accounts extends Component {
             </div>
           </div>
         </nav>
+        <div className="border border-primary rounded">
+          <div
+            className="btn-toolbar download-bar"
+            role="toolbar"
+            aria-label="Toolbar with button groups"
+          >
+            <div
+              className="btn-group mr-2"
+              role="group"
+              aria-label="First group"
+            >
+              {this.props.accts && this.props.accts.Accounts && (
+                <Download
+                  dataSet={this.props.accts.Accounts}
+                  source="accounts"
+                />
+              )}
+            </div>
+          </div>
+        </div>
         <div>
           <table className="table table-hover">
             <thead>
@@ -55,13 +76,12 @@ class Accounts extends Component {
               </tr>
             </thead>
             <tbody>
-            {
-                this.props.accts && this.props.accts.Accounts &&
-                    this.props.accts.Accounts.map((acct) => {
-                        return <Account info={acct} key={acct.AccountID}/>
-                    })
-                }
-            }
+              {this.props.accts &&
+                this.props.accts.Accounts &&
+                this.props.accts.Accounts.map(acct => {
+                  return <Account info={acct} key={acct.AccountID} />;
+                })}
+              }
             </tbody>
           </table>
         </div>
