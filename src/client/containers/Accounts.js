@@ -72,7 +72,6 @@ class Accounts extends Component {
                 <th scope="col">Reporting Code</th>
                 <th scope="col">Reporting Name</th>
                 <th scope="col">Expense Claims</th>
-                <th scope="col">Payments To Account</th>
               </tr>
             </thead>
             <tbody>
@@ -81,7 +80,6 @@ class Accounts extends Component {
                 this.props.accts.Accounts.map(acct => {
                   return <Account info={acct} key={acct.AccountID} />;
                 })}
-              }
             </tbody>
           </table>
         </div>
