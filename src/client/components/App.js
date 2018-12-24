@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import Refresh from '../containers/Refresh';
 import Home from './Home'
 import Vendors from '../containers/Vendors';
+import Accounts from '../containers/Accounts';
 
 const App = () =>
   <Router>
@@ -11,7 +12,7 @@ const App = () =>
   <Refresh />
     <Route path='/' exact component={Home} />
     <Route path='/vendors' exact component={Vendors} />
-    <Route path='/accounts' exact component={Vendors} />
+    <Route path='/accounts' exact component={Accounts} />
     </div>
   </Router>
 export default App;
