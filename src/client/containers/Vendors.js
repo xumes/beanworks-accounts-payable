@@ -1,13 +1,14 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Vendor from "../components/Vendor";
+import Download from './../components/Download'
 
 class Vendors extends Component {
   render() {
     return (
-      <div>
+      <div className='vendors'>
         <div className="alert alert-primary" role="alert">
-          Vendors
+          Vendors List
         </div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <a className="navbar-brand" href="#">
@@ -38,6 +39,37 @@ class Vendors extends Component {
             </div>
           </div>
         </nav>
+        <div className="border border-primary rounded">
+          <div
+            className="btn-toolbar"
+            role="toolbar"
+            aria-label="Toolbar with button groups"
+          >
+            <div
+              className="btn-group mr-2"
+              role="group"
+              aria-label="First group"
+            >
+              <span className="badge badge-secondary">Filter By:</span>
+              <button type="button" className="btn btn-info">
+                Supplier
+              </button>
+              <button type="button" className="btn btn-success">
+                Customer
+              </button>
+            </div>
+            <div
+              className="btn-group mr-2"
+              role="group"
+              aria-label="Second group"
+            >
+            {
+              this.props.contacts && this.props.contacts.Contacts && <Download dataSet={this.props.contacts.Contacts} from='vendors'/>
+            }
+              
+            </div>
+          </div>
+        </div>
         <div>
           <table className="table table-hover">
             <thead>
@@ -50,13 +82,12 @@ class Vendors extends Component {
               </tr>
             </thead>
             <tbody>
-            {
-                this.props.contacts && this.props.contacts.Contacts &&
-                    this.props.contacts.Contacts.map((vendor) => {
-                        return <Vendor info={vendor} key={vendor.ContactID}/>
-                    })
-                }
-            }
+              {this.props.contacts &&
+                this.props.contacts.Contacts &&
+                this.props.contacts.Contacts.map(vendor => {
+                  return <Vendor info={vendor} key={vendor.ContactID} />;
+                })}
+              }
             </tbody>
           </table>
         </div>
