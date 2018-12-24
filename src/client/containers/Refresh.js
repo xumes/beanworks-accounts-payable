@@ -30,10 +30,7 @@ class Refresh extends Component {
               <p className="card-text">Please, connect to your Xero account.</p>
             </div>
             <div className="card-footer bg-transparent border-info">
-              <a
-                className="btn btn-light btn-lg"
-                href="/api/connect"
-              >
+              <a className="btn btn-light btn-lg" href="/api/connect">
                 {" "}
                 Connect to Xero
               </a>
@@ -43,13 +40,8 @@ class Refresh extends Component {
       );
     }
     return (
-      <div>
-        <button
-          onClick={this.onRefreshClick}
-          className="btn btn-primary btn-lg btn-block"
-        >
-          Refresh
-        </button>
+      <div className="alert alert-primary" role="alert">
+        So Fictitious Bar & Pub
       </div>
     );
   }

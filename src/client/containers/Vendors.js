@@ -7,7 +7,7 @@ class Vendors extends Component {
   render() {
     return (
       <div className="vendors">
-        <div className="alert alert-primary" role="alert">
+        <div className="alert alert-dark" role="alert">
           Vendors List
         </div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">

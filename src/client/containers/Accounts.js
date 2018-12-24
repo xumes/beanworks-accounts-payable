@@ -8,8 +8,8 @@ class Accounts extends Component {
   render() {
     return (
       <div className="accounts">
-        <div className="alert alert-primary" role="alert">
-          Accounts
+        <div className="alert alert-dark" role="alert">
+          Accounts List
         </div>
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
           <a className="navbar-brand" href="#">
