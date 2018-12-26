@@ -10,10 +10,10 @@ let lastRequestToken = null
 let response = {}
 
 router.get('/access', async (req, res) => {
-  let oauth_verifier = req.query.oauth_verifier
+  let oauthVerifier = req.query.oauthVerifier
   let accessToken = await xero.oauth1Client.swapRequestTokenforAccessToken(
     lastRequestToken,
-    oauth_verifier
+    oauthVerifier
   )
 
   let org = await xero.organisations.get()
