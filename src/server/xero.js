@@ -1,7 +1,6 @@
 const express = require('express')
 const router = express.Router()
 const XeroClient = require('xero-node').AccountingAPIClient
-const axios = require('axios')
 
 const config = require('./../../config/config.json')
 
