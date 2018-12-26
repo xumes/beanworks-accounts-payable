@@ -15,6 +15,7 @@ router.get('/access', async (req, res) => {
     lastRequestToken,
     oauthVerifier
   )
+  console.log(accessToken)
 
   let org = await xero.organisations.get()
   let accts = await xero.accounts.get()

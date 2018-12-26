@@ -8,7 +8,7 @@
     "url": "https://github.com/xumes/beanworks-accounts-payable"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "standard",
     "client": "webpack -w --config webpack.config.js",
     "server": "nodemon index.js",
     "dev": "concurrently --kill-others-on-fail \"npm run client\" \"npm run server\"",
@@ -61,6 +61,7 @@
     "css-loader": "^0.28.11",
     "file-loader": "^1.1.11",
     "nodemon": "^1.17.5",
+    "standard": "^12.0.1",
     "style-loader": "^0.21.0",
     "uglifyjs-webpack-plugin": "^1.2.7",
     "webpack": "^4.12.2",
