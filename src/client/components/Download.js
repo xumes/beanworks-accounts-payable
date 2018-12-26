@@ -1,51 +1,39 @@
 import React from 'react'
-import ReactExport from 'react-data-export'
+import Workbook from 'react-excel-workbook'
 
-const ExcelFile = ReactExport.ExcelFile
-const { ExcelSheet, ExcelColumn } = ReactExport.ExcelFile
-
-class Download extends React.Component {
-  render () {
-    if (this.props.source === 'vendors') {
-      return (
-        <ExcelFile
-          element={<button className='btn btn-primary'>Download</button>}
-        >
-          <ExcelSheet data={this.props.dataSet} name='Vendors'>
-            <ExcelColumn
-              label='Type'
-              value={col => (col.IsSupplier ? 'Supplier' : 'Customer')}
-            />
-            <ExcelColumn label='Name' value='Name' />
-            <ExcelColumn label='Email Address' value='EmailAddress' />
-          </ExcelSheet>
-        </ExcelFile>
-      )
-    }
+const Download = props => {
+  if (props.source === 'vendors') {
     return (
-      <ExcelFile
-        element={<button className='btn btn-primary'>Download</button>}
-      >
-        <ExcelSheet data={this.props.dataSet} name='Accounts'>
-          <ExcelColumn label='Type' value='Type' />
-          <ExcelColumn label='Name' value='Name' />
-          <ExcelColumn label='Class' value='Class' />
-          <ExcelColumn label='Code' value='Code' />
-          <ExcelColumn label='Description' value='Description' />
-          <ExcelColumn label='Reporting Code' value='ReportingCode' />
-          <ExcelColumn label='Reporting Name' value='ReportingCodeName' />
-          <ExcelColumn
-            label='Show in Expense Claims?'
-            value={col => (col.ShowInExpenseClaims ? 'Yes' : 'No')}
-          />
-          <ExcelColumn
-            label='Enable Payments to Account?'
-            value={col => (col.EnablePaymentsToAccount ? 'Yes' : 'No')}
-          />
-        </ExcelSheet>
-      </ExcelFile>
+      <Workbook filename='vendors.xlsx' element={<button className='btn btn-lg btn-primary'>Download</button>}>
+        <Workbook.Sheet data={props.dataSet} name='Vendors'>
+          <Workbook.Column label='Type' value={col => (col.IsSupplier ? 'Supplier' : 'Customer')} />
+          <Workbook.Column label='Name' value='Name' />
+          <Workbook.Column label='Email Address' value='EmailAddress' />
+        </Workbook.Sheet>
+      </Workbook>
     )
   }
+  return (
+    <Workbook filename='vendors.xlsx' element={<button className='btn btn-lg btn-primary'>Download</button>}>
+      <Workbook.Sheet data={props.dataSet} name='Accounts'>
+        <Workbook.Column label='Type' value='Type' />
+        <Workbook.Column label='Name' value='Name' />
+        <Workbook.Column label='Class' value='Class' />
+        <Workbook.Column label='Code' value='Code' />
+        <Workbook.Column label='Description' value='Description' />
+        <Workbook.Column label='Reporting Code' value='ReportingCode' />
+        <Workbook.Column label='Reporting Name' value='ReportingCodeName' />
+        <Workbook.Column
+          label='Show in Expense Claims?'
+          value={col => (col.ShowInExpenseClaims ? 'Yes' : 'No')}
+        />
+        <Workbook.Column
+          label='Enable Payments to Account?'
+          value={col => (col.EnablePaymentsToAccount ? 'Yes' : 'No')}
+        />
+      </Workbook.Sheet>
+    </Workbook>
+  )
 }
 
 export default Download

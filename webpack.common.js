@@ -13,7 +13,15 @@ module.exports = {
   entry: `${APP_DIR}/index.js`,
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    chunkFilename: '[name].bundle.js',
+    libraryTarget: 'var',
+    library: 'XLSX'
+  },
+  node: {
+    fs: 'empty',
+    process: false,
+    Buffer: false
   },
   module: {
     rules: [
@@ -43,6 +51,10 @@ module.exports = {
         loader: 'file-loader',
         exclude: [/node_modules/]
       }
+    ],
+    noParse: [
+      /xlsx.core.min.js/,
+      /xlsx.full.min.js/
     ]
   },
   plugins: [
@@ -50,5 +62,10 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, 'config/index.html')
     })
+  ],
+  externals: [
+    { './cptable': 'var cptable' },
+    { '../xlsx.js': 'var _XLSX' },
+    { './jszip': 'jszip' }
   ]
 }

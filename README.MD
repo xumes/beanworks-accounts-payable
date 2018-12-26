@@ -101,6 +101,7 @@ The application is production ready. In order to start the deployment process, r
 ```
 npm run beforeInstall
 ```
+Check the result on '/dist' folder
 
 ## Built With
 
