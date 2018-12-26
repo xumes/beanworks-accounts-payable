@@ -5,6 +5,9 @@ import Download from './../components/Download'
 
 class Vendors extends Component {
   render () {
+    if (this.props && !this.props.contacts) {
+      return (null)
+    }
     return (
       <div className='vendors'>
         <div className='alert alert-dark' role='alert'>

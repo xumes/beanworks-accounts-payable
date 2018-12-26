@@ -6,6 +6,9 @@ import Download from './../components/Download'
 
 class Accounts extends Component {
   render () {
+    if (this.props && !this.props.accts) {
+      return (null)
+    }
     return (
       <div className='accounts'>
         <div className='alert alert-dark' role='alert'>

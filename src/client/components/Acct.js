@@ -10,8 +10,8 @@ const Acct = props => {
       <td>{props.info.Description}</td>
       <td>{props.info.ReportingCode}</td>
       <td>{props.info.ReportingCodeName}</td>
-      {props.info && props.info.ShowInExpenseClaims && <td><span class='badge badge-info'>YES</span></td>}
-      {props.info && !props.info.ShowInExpenseClaims && <td><span class='badge badge-secondary'>NO</span></td>}
+      {props.info && props.info.ShowInExpenseClaims && <td><span className='badge badge-info'>YES</span></td>}
+      {props.info && !props.info.ShowInExpenseClaims && <td><span className='badge badge-secondary'>NO</span></td>}
     </tr>
   )
 }
