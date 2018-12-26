@@ -24,7 +24,7 @@ class Refresh extends Component {
       return (
         <div className='home-no-data'>
           <div className='card border-primary mb-3'>
-            <div className='card-header'>Welcome to our app</div>
+            <div className='card-header'><h1>So Fictitious Bar & Pub</h1></div>
             <div className='card-body text-primary'>
               <h5 className='card-title'>Accounts Payable System</h5>
               <p className='card-text'>Please, connect to your Xero account.</p>
@@ -41,7 +41,7 @@ class Refresh extends Component {
     }
     return (
       <div className='alert alert-primary' role='alert'>
-        So Fictitious Bar & Pub
+        <h1>So Fictitious Bar & Pub</h1>
       </div>
     )
   }

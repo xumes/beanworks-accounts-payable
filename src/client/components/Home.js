@@ -26,7 +26,7 @@ const Home = ({ xero }) => {
   return (
     <div>
       <div className='jumbotron'>
-        <h1 className='display-4'>{Name}</h1>
+        <h2 className='display-4'>{Name}</h2>
         <p className='lead'>
           {AddressLine1}, {AddressLine2}, {City} / {CountryCode}
         </p>
