@@ -1,12 +1,12 @@
-import React from "react";
-import VendorType from "./VendorType";
-import Ballance from "./Ballance";
+import React from 'react'
+import VendorType from './VendorType'
+import Ballance from './Ballance'
 
 const Vendor = props => {
   const type = {
     isSupplier: props.info.IsSupplier,
     isCustomer: props.info.IsCustomer
-  };
+  }
   return (
     <tr key={props.info.ContactID}>
       <td>
@@ -16,16 +16,16 @@ const Vendor = props => {
       <td>{props.info.EmailAddress}</td>
       <Ballance
         ballance={props.info.Balances}
-        type="ap"
-        key={props.info.ContactID + "ap"}
+        type='ap'
+        key={props.info.ContactID + 'ap'}
       />
       <Ballance
         ballance={props.info.Balances}
-        type="ar"
-        key={props.info.ContactID + "ar"}
+        type='ar'
+        key={props.info.ContactID + 'ar'}
       />
     </tr>
-  );
-};
+  )
+}
 
-export default Vendor;
+export default Vendor

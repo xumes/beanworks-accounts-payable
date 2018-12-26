@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 const Ballance = props => {
   if (props.ballance && props.type == 'ap') {
@@ -9,7 +9,7 @@ const Ballance = props => {
     return <td>{props.ballance.AccountsReceivable.Outstanding}</td>
   }
 
-  return <td></td>
-};
+  return <td />
+}
 
-export default Ballance;
+export default Ballance
