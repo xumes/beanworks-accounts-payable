@@ -7,4 +7,7 @@ module.exports = merge(common, {
   plugins: [
     new UglifyJSPlugin(),
   ],
+  devServer: {
+    contentBase: './dist',
+  },
 });
