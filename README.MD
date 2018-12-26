@@ -67,40 +67,59 @@ The landpage welcomes and invites you to connect to the Xero account and give ac
 
 <img align="center" src="/readme/readme-welcome.png">
 
-```
-Give an example
-```
+Next, the application is redirected to the Xero website and asks for your credentials (must be the same where you created the public application described on the prerequisites on this README)
+
+<img align="center" src="/readme/readme-welcome-xero.png">
+
+After insert your credentials and click on Login, select the organisation (It is recommended to use the __Demo Company__).
+
+<img align="center" src="/readme/readme-organisation.png">
+
+You will see the Taking you back to <application name> screen, hold on for a moment.
+
+<img align="center" src="/readme/readme-taking-back.png">
+
+The Home Page application is loaded. A few information about the Demo Company is displayed for reference, like its address, phone number and a few finance information.
+
+<img align="center" src="/readme/readme-home-page.png">
+
+The two cards displayed at the bottom directs you to the subject area where yu can see or download the information: __Vendors__ or __Accounts__
+
+By clicking on __Vendors__ the following page is displayed:
+<img align="center" src="/readme/readme-vendors.png">
+
+By clicking on __Accounts__ the following page is displayed:
+<img align="center" src="/readme/readme-accounts.png">
+
+On both pages, clicking on Download button the excel file is generated:
+<img align="center" src="/readme/readme-account-excel.png">
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+The application is production ready. In order to start the deployment process, run the beforeInstall process and the minified bundle is created:
+
+```
+npm run beforeInstall
+```
 
 ## Built With
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+* [Node.js](https://nodejs.org/) - The web framework used on Backend
+* [React](https://reactjs.org/) - The web framework used on Frontend
+* [Redux](https://redux.js.org/) - Used for state controlling
+* [Redux Promise](https://www.npmjs.com/package/redux-promise/) - Used to work with async flow on Redux
+* [Xero](https://developer.xero.com/) - Used to integrate the app with Xero
 
-## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+## Author
 
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+* **Reginaldo Marcelo dos Santos** - *candidate* 
+ - [Personal website](https://reginaldosantos.com.br)
+ - [Github Account](https://github.com/xumes)
+ - [LinkedIn Account](https://www.linkedin.com/in/reginaldosantos/)
+ - [Udemy Account](https://www.udemy.com/user/reginaldo-marcelo-dos-santos-2/)
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
