@@ -2,7 +2,7 @@
 
 # Beanworks Accounts Payable module
 
-Challenge project created during a job interview (code test phase)
+This project was created during a code challenge, when I was asked to implement a system that reads some information from an external api (xero) and let Vendors and Accounts list available for download.
 
 ## Getting Started
 
@@ -114,7 +114,7 @@ Check the result on '/dist' folder
 
 ## Author
 
-* **Reginaldo Marcelo dos Santos** - *candidate* 
+* **Reginaldo Marcelo dos Santos** - *developer* 
  - [Personal website](https://reginaldosantos.com.br)
  - [Github Account](https://github.com/xumes)
  - [LinkedIn Account](https://www.linkedin.com/in/reginaldosantos/)
