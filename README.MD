@@ -120,7 +120,4 @@ Check the result on '/dist' folder
  - [LinkedIn Account](https://www.linkedin.com/in/reginaldosantos/)
  - [Udemy Account](https://www.udemy.com/user/reginaldo-marcelo-dos-santos-2/)
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
